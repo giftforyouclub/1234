@@ -23,18 +23,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'i+ehfq14ez9wcnj9cw@b=d-5y7=a582bap38l%1&9-a+&g*l84'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # During development only
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # During development only
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'bloodcarefoundation.org@gmail.com'
-EMAIL_HOST_PASSWORD = "blooddonation"
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ""
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 ALLOWED_HOSTS = ['*']
 
@@ -93,9 +93,9 @@ DATABASES = {
 
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'blooddonation',
-        'USER': 'postgres',
-        'PASSWORD': 'ramlal123',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '5432'
     }
