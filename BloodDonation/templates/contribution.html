@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block title %} Contribution {% endblock %}
+{% load static %}
+{% block content %}
+
+<!-- Contribution Starts -->
+<section class="about section" id="give_donation">
+
+    {% include 'navbar.html' %}
+
+    <div class="container">
+        <div class="row">
+            <div class="about-content padd-15">
+                <div class="row">
+                    <div class="section-title padd-15">
+                        <h2>Want To Contribute</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="about-content padd-15">
+
+                        <div id="captioned-gallery">
+                            <figure class="slider">
+                                <figure>
+                                    <img src="{% static 'images/contribution1.webp' %}" alt="Every Child in School">
+                                    <figcaption>Every Child in School</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="{% static 'images/contribution2.webp' %}" alt="No Child Hungry">
+                                    <figcaption>No Child Hungry</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="{% static 'images/contribution3.webp' %}" alt="No Child Homeless">
+                                    <figcaption>No Child Homeless</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="{% static 'images/contribution4.webp' %}" style="cursor: pointer;" alt="Donate Now" onclick="paymentGateway()">
+                                    <figcaption>Donate Now</figcaption>
+                                </figure>
+                            </figure>
+                        </div>
+
+                        <br><br>
+
+                        <h2>Your $1 donation goes where it is needed most.</h2>
+                        <h4>Money donated to the "LetsDonateBlood" is used to support the entire organization as this allows flexibility for the funds raised to be used wherever the current need is greatest.</h4>
+
+                        <img src="{% static 'images/give donation.webp' %}" alt="Donation Image" id="giving_donation">
+
+                        <button onclick="paymentGateway()" class="donate-now-btn">Donate Now</button>
+
+                        <script async defer crossorigin="anonymous"
+                            src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0"
+                            nonce="QPEFkJ2C"></script>
+
+                        <div class="fb-share-button" data-href="https://github.com/harmanbatheja15" data-layout="button"
+                            data-size="large">
+                            <a target="_blank"
+                                href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%2FBlood%2520Donation%25202%2Findex.php&amp;src=sdkpreparse"
+                                class="fb-xfbml-parse-ignore">Share</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contribution Ends -->
+
+{% endblock %}

@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% block title %} Register {% endblock %}
+{% load static %}
+{% block content %}
+
+<!-- Register Section -->
+<!-- <section class="about section" id="register">
+    <div class="container">
+        <div class="row">
+            <div class="section-title padd-15">
+                <h2>Register Here</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="about-content padd-15">
+                <div class="form-modal">
+
+                    <div class="form-toggle">
+                        <button id="login-toggle" onclick="toggleLogin()">Log In</button>
+                        <button id="signup-toggle" onclick="toggleSignup()">Register</button>
+                    </div>
+
+                    <div id="login-form">
+                        <form>
+
+                            {% csrf_token %}
+
+                            <label for="loginEmail">Email</label>
+                            <input type="text" placeholder="Email" id="loginEmail" required />
+
+                            <label for="pass1">Password</label>
+                            <input type="password" placeholder="Password" id="pass1" required />
+
+                            <span class="eye1" onclick="passwordToggler1()">
+                                <i id="hide1" class="fa fa-eye"></i>
+                                <i id="hide2" class="fa fa-eye-slash"></i>
+                            </span>
+                            <button type="submit" class="btn login">Login</button>
+                            <p><a href="#">Forgot Password?</a></p>
+                            <p>
+                                <a href="javascript:void(0)" onclick="toggleSignup()">
+                                    Don't have an account? Register
+                                </a>
+                            </p>
+                        </form>
+                    </div>
+
+                    <div id="signup-form">
+
+                        <form action="{% url 'register' %}" method="POST">
+                            {% csrf_token %}
+
+                            <label for="registerName">Name</label>
+                            <input type="text" placeholder="Name" id="registerName" name="name" required />
+
+                            <label for="name">Email</label>
+                            <input type="email" placeholder="Email" id="registerEmail" name="email" required />
+
+                            <label for="registerPhone">Mobile Number</label>
+                            <input type="number" placeholder="Mobile Number" id="registerPhone" name="phone" required />
+
+                            <label for="registerBloodGroup">Blood Group</label>
+                            <select id="registerBloodGroup" name="blood_group" required>
+                                <option value="" disabled selected>Select Blood Group</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                            </select>
+
+                            <label for="registerUsername">Username</label>
+                            <input type="text" placeholder="Username" id="registerUsername" name="username"
+                                required />
+
+                            <label for="pass2">Password</label>
+                            <input type="password" placeholder="Password" id="pass2" name="password1" required />
+
+                            <span class="eye2" onclick="passwordToggler2()">
+                                <i id="hide3" class="fa fa-eye"></i>
+                                <i id="hide4" class="fa fa-eye-slash"></i>
+                            </span>
+
+                            <label for="pass3">Confirm Password</label>
+                            <input type="password" placeholder="Confirm Password" id="pass3" name="password2" required />
+
+                            <span class="eye3" onclick="passwordToggler3()">
+                                <i id="hide5" class="fa fa-eye"></i>
+                                <i id="hide6" class="fa fa-eye-slash"></i>
+                            </span>
+
+                            <label for="registerCountry">Country</label>
+                            <select id="registerCountry" name="country">
+                                <option disabled selected value="select">Select Country</option>
+                                <option value="india">India</option>
+                                <option value="afghanistan">Afghanistan</option>
+                            </select>
+
+                            <label for="registerState">State</label>
+                            <select id="registerState" name="state">
+                                <option disabled selected value="select">Select State</option>
+                                <option value="maharashtra">Maharashtra</option>
+                                <option value="bamyan province">Bamyan Province</option>
+                            </select>
+
+                            <label for="registerCity">City</label>
+                            <select id="registerCity" name="city">
+                                <option disabled selected value="select">Select City</option>
+                                <option value="mumbai">Mumbai</option>
+                                <option value="delhi">Delhi</option>
+                            </select>
+
+                            <p style="color:#4f4f4f;">By clicking on Register, You authorise this website to display
+                                your Details.</p>
+                            <button type="submit" class="btn signup">Register</button>
+                            <p>
+                                <a href="javascript:void(0)" onclick="toggleLogin()">Already Registered? Log In</a>
+                            </p>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<!-- Register Section End -->
+
+{% endblock %}
