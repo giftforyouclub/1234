@@ -1,1 +1,1 @@
-# Blood-Donation-Management-System
+# Blood-Donation-Management-System website using Django
